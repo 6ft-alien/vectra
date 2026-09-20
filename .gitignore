@@ -40,7 +40,9 @@ htmlcov/
 
 # Raw Large Datasets (>100MB)
 # Note: Reproducible pre-extracted feature matrix is retained in data/engineered_features.csv
+training_files
 training_files/
+test_files
 test_files/
 *.zip
 
@@ -58,12 +60,25 @@ Thumbs.db
 Desktop.ini
 
 # IDEs
+.vscode
 .vscode/
+.idea
 .idea/
 
 # Lab Exercise Files, Course Drafts & Templates
+lab_*
 lab_*/
-Lab 2*
+lab_*/**
+lab_3_eda
+lab_4_latex
+lab_6.1_UCI_Breast_Cancer
+lab_6_decision_tree
+lab_7_kmeans_knn
+lab_8_pca_clustering
+lab_9_10_mlp
+els-cas-templates
 els-cas-templates/
+research_paper
 research_paper/
-Guide_for_authors*.md
+Lab 2*
+Guide_for_authors*
