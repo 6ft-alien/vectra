@@ -60,3 +60,10 @@ Desktop.ini
 # IDEs
 .vscode/
 .idea/
+
+# Lab Exercise Files, Course Drafts & Templates
+lab_*/
+Lab 2*
+els-cas-templates/
+research_paper/
+Guide_for_authors*.md

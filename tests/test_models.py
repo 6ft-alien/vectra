@@ -27,7 +27,7 @@ class TestModelsAndMetrics(unittest.TestCase):
 
     def test_mlp_models(self):
         # Sklearn MLP
-        mlp_pipe = build_mlp_pipeline(hidden_layer_sizes=(16,), max_iter=20, random_state=42)
+        mlp_pipe = build_mlp_pipeline(hidden_layer_sizes=(16,), max_iter=100, random_state=42)
         mlp_pipe.fit(self.X, self.y)
         probs = mlp_pipe.predict_proba(self.X)
         self.assertEqual(probs.shape, (60, 2))

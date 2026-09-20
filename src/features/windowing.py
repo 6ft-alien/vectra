@@ -1,6 +1,6 @@
 """Sliding window segmentation engine for continuous behavioral biometrics."""
 
-from typing import Generator, List, Tuple
+from typing import Generator, List, Optional, Tuple
 import numpy as np
 import pandas as pd
 
@@ -25,10 +25,14 @@ class SlidingWindowSegmenter:
         self.extractor = FeatureExtractor()
 
     def segment_session(
-        self, df: pd.DataFrame
+        self, df: pd.DataFrame, max_duration_sec: Optional[float] = None
     ) -> List[Tuple[float, float, np.ndarray]]:
         """
         Segment a session DataFrame into sliding windows.
+
+        Parameters:
+            df: Session DataFrame.
+            max_duration_sec: Optional maximum elapsed time in seconds to segment.
 
         Returns:
             List of tuples: (window_start_sec, window_end_sec, feature_vector).
@@ -38,17 +42,19 @@ class SlidingWindowSegmenter:
 
         t = df["client_timestamp"].values.astype(float)
         t0 = t[0]
-        t_max = t[-1]
+        t_limit = t0 + max_duration_sec if max_duration_sec is not None else t[-1]
+        t_max = min(t[-1], t_limit)
 
         windows = []
         curr_start = t0
 
         while curr_start + self.window_size_sec <= t_max + self.stride_sec:
             curr_end = curr_start + self.window_size_sec
-            mask = (t >= curr_start) & (t <= curr_end)
-            w_df = df.iloc[mask]
+            idx_start = int(np.searchsorted(t, curr_start, side="left"))
+            idx_end = int(np.searchsorted(t, curr_end, side="right"))
 
-            if len(w_df) >= self.min_events:
+            if (idx_end - idx_start) >= self.min_events:
+                w_df = df.iloc[idx_start:idx_end]
                 feat_vec = self.extractor.extract_vector(w_df)
                 windows.append((curr_start - t0, curr_end - t0, feat_vec))
 

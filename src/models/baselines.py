@@ -2,6 +2,7 @@
 
 from typing import Dict
 from sklearn.base import BaseEstimator
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.ensemble import ExtraTreesClassifier, GradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
@@ -28,12 +29,14 @@ def get_baseline_models(random_state: int = RANDOM_STATE) -> Dict[str, BaseEstim
         ),
         "Support Vector Machine (RBF)": Pipeline([
             ("scaler", StandardScaler()),
-            ("clf", SVC(
-                C=2.0,
-                kernel="rbf",
-                gamma="scale",
-                probability=True,
-                random_state=random_state,
+            ("clf", CalibratedClassifierCV(
+                SVC(
+                    C=2.0,
+                    kernel="rbf",
+                    gamma="scale",
+                    random_state=random_state,
+                ),
+                ensemble=False,
             )),
         ]),
         "Gradient Boosting (GBDT)": GradientBoostingClassifier(
