@@ -29,8 +29,9 @@ venv/
 env/
 ENV/
 
-# Jupyter Notebook checkpoints
+# Jupyter Notebook checkpoints & exports
 .ipynb_checkpoints
+*_files/
 
 # pytest / unit testing cache
 .pytest_cache/
