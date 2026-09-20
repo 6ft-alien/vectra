@@ -1,0 +1,7 @@
+Feature Subset,Dimensions,Mean ROC-AUC,Std Dev
+Kinematic Only (Vel/Acc),6,0.7574,0.0854
+Angular Only (Curv/AngVel),2,0.6685,0.0954
+Cadence & Pauses Only,6,0.6887,0.0792
+Spatial Geometry Only,9,0.7175,0.0884
+Kinematic + Cadence,12,0.7445,0.0717
+All 25 Features (Proposed),25,0.7402,0.0674

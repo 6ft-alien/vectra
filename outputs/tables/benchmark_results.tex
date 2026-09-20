@@ -1,0 +1,19 @@
+\begin{table}
+\caption{Comparative Performance of Machine Learning Architectures for Continuous Mouse Dynamics Authentication.}
+\label{tab:model_benchmark}
+\begin{tabular}{lllllllllll}
+\toprule
+Model & ROC-AUC & EER (%) & Accuracy (%) & Accuracy at EER (%) & Precision & Recall & F1-Score & FAR (%) & FRR (%) & Training Time (s) \\
+\midrule
+Random Forest & 0.8536 & 23.15% & 77.70% & 76.99% & 0.7426 & 0.7303 & 0.7364 & 18.83% & 26.97% & 5.31 \\
+Support Vector Machine (RBF) & 0.8159 & 24.07% & 76.28% & 75.93% & 0.7357 & 0.6929 & 0.7137 & 18.52% & 30.71% & 0.67 \\
+Gradient Boosting (GBDT) & 0.8603 & 22.41% & 79.65% & 77.70% & 0.7716 & 0.7427 & 0.7569 & 16.36% & 25.73% & 8.08 \\
+k-Nearest Neighbors & 0.7872 & 27.78% & 72.74% & 72.39% & 0.6776 & 0.6888 & 0.6831 & 24.38% & 31.12% & 2.79 \\
+Extra Trees & 0.8504 & 22.82% & 77.70% & 77.35% & 0.7347 & 0.7469 & 0.7407 & 20.06% & 25.31% & 3.79 \\
+Logistic Regression & 0.8216 & 25.31% & 75.58% & 74.87% & 0.7068 & 0.7303 & 0.7184 & 22.53% & 26.97% & 0.19 \\
+Multi-Layer Perceptron (MLP) & 0.8202 & 24.90% & 74.16% & 75.22% & 0.6923 & 0.7095 & 0.7008 & 23.46% & 29.05% & 1.49 \\
+One-Class SVM (Unsupervised) & 0.5593 & 47.53% & 60.35% & 52.57% & 0.5586 & 0.3361 & 0.4197 & 19.75% & 66.39% & 0.10 \\
+Isolation Forest (Unsupervised) & 0.4839 & 52.47% & 54.34% & 47.61% & 0.4550 & 0.3568 & 0.4000 & 31.79% & 64.32% & 3.54 \\
+\bottomrule
+\end{tabular}
+\end{table}
