@@ -1,4 +1,4 @@
-# Behavioral Biometrics for Zero-Trust Web Architectures: Continuous Authentication via Cursor Dynamics
+# Behavioral Biometrics for Continuous Authentication in Zero-Trust Web Architectures
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -221,8 +221,8 @@ If you utilize this research framework, codebase, or methodology in your work, p
 ```bibtex
 @article{nityanand2026behavioral,
   author    = {Nityanand, K. G.},
-  title     = {Behavioral Biometrics for Zero-Trust Web Architectures: Continuous Authentication via Cursor Dynamics},
-  journal   = {Department of Computer Science and Engineering, CHRIST (Deemed to be University)},
+  title     = {Behavioral Biometrics for Continuous Authentication in Zero-Trust Web Architectures},
+  journal   = {Department of Computer Science, CHRIST (Deemed to be University)},
   year      = {2026},
   url       = {https://github.com/nityanand-kg/mouse-dynamics-zero-trust}
 }

@@ -1,7 +1,7 @@
 """Behavioral Biometrics Feature Extraction Engine.
 
 Extracts the 25 kinematic, angular, cadence, and spatial features specified in:
-'Behavioral Biometrics for Zero-Trust Web Architectures: Continuous Authentication via Cursor Dynamics'
+'Behavioral Biometrics for Continuous Authentication in Zero-Trust Web Architectures'
 """
 
 from typing import Dict, List, Optional, Union

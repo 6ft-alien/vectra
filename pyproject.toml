@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mouse-dynamics-zero-trust"
 version = "1.0.0"
-description = "Behavioral Biometrics for Zero-Trust Web Architectures: Continuous Authentication via Cursor Dynamics"
+description = "Behavioral Biometrics for Continuous Authentication in Zero-Trust Web Architectures"
 readme = "README.md"
 license = { text = "MIT" }
 authors = [

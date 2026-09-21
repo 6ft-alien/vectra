@@ -7,7 +7,7 @@ from pathlib import Path
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Continuous Authentication via Cursor Dynamics for Zero-Trust Web Architectures."
+        description="Behavioral Biometrics for Continuous Authentication in Zero-Trust Web Architectures."
     )
     parser.add_argument(
         "--mode",
